@@ -49,5 +49,5 @@ src/
 └── index.css       # Global styles
 
 🌐 Live Demo
-View the live site here: 
+View the live site here: https://portfoliojigna-production.up.railway.app/
 My github link here: https://github.com/JignabahenKalani
