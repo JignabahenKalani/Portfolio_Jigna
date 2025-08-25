@@ -6,10 +6,22 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('https://api.github.com/users/JignabahenKalani/repos')
-      .then(res => setRepos(res.data))
-      .catch(console.error);
+    const fetchRepos = async () => {
+      try {
+        // Fetch your repos
+        const myRepos = await axios.get('https://api.github.com/users/JignabahenKalani/repos');
+        
+        // Fetch collaboration repo directly
+        const collabRepo = await axios.get('https://api.github.com/repos/JamesBampton/gurus-travel-blog');
+        
+        // Merge them together
+        setRepos([...myRepos.data, collabRepo.data]);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchRepos();
   }, []);
 
   return (
@@ -48,3 +60,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
