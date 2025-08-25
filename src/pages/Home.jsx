@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 import profile from '../assets/profile.jpg';
 import '../index.css';
-import CV from '../assets/JIGNABAHEN_KALANI_CV.pdf';
+import CV from '../assets/Jigna-Kalani.pdf';
 
 const Home = () => {
   const typedRef = useRef(null);
